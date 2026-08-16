@@ -189,10 +189,10 @@ h3,
 .hero-image {
     flex: 1;
     position: relative;
-    height: 80vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeUp 1s forwards ease-out 0.5s;
@@ -206,21 +206,10 @@ h3,
     border-radius: 4px;
 }
 
-.image-accent {
-    position: absolute;
-    width: 60%;
-    height: 70%;
-    background-color: rgba(139, 115, 85, 0.05);
-    bottom: 0;
-    right: 10%;
-    z-index: 1;
-    border-radius: 200px 200px 0 0;
-}
-
 /* About Section */
 .about {
     padding: 120px 5%;
-    background-color: #fff;
+    background-color: var(--bg-color);
 }
 
 .about-grid {
@@ -243,7 +232,7 @@ h3,
 /* Practice Areas */
 .practice-areas {
     padding: 120px 5%;
-    background-color: var(--bg-color);
+    background-color: #fff;
 }
 
 .section-header {
@@ -265,12 +254,13 @@ h3,
 }
 
 .card {
-    background: #fff;
+    background: var(--bg-color);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
     transition: var(--transition-smooth);
     border-top: 3px solid transparent;
+    border: 1px solid rgba(139, 115, 85, 0.12);
 }
 
 .card:hover {
@@ -396,10 +386,6 @@ h3,
     height: 35px;
     fill: white;
 }
-
-/* .whatsapp-float:hover {
-    background-color: #128C7E;
-} */
 
 @keyframes pulse {
     0% {
