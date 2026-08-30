@@ -292,19 +292,47 @@ h3,
     flex: 1;
 }
 
-.location-text h2 {
-    font-size: 3rem;
-    margin-bottom: 24px;
-    color: var(--primary-color);
-}
-
-.location-text p {
+.location-address {
     font-size: 1.1rem;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
-.location-text strong {
-    color: var(--accent-color);
+.location-socials {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.social-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: 1px solid rgba(139, 115, 85, 0.25);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.social-icon-link svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition-smooth);
+}
+
+.social-icon-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 115, 85, 0.15);
+    border-color: var(--accent-color);
+    background-color: #fff;
+    color: var(--primary-color);
 }
 
 .location-map {
@@ -314,7 +342,7 @@ h3,
 }
 
 .location-map img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     opacity: 0.9;
 }
@@ -436,6 +464,14 @@ h3,
     .location-content {
         flex-direction: column;
         text-align: center;
+    }
+
+    .location-map img {
+        max-width: 100%;
+    }
+
+    .location-socials {
+        justify-content: center;
     }
 
     .navbar {
